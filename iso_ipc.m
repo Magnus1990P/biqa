@@ -26,7 +26,7 @@ function [IRIS_PUPIL_CONTRAST, CONTRAST]  = iso_ipc( IMG, PUPIL, IRIS )
   iDRB = get_rect( 'b', IMG, [PUPIL(1,1)+DELTA , PUPIL(1,2)+DELTA], RECT );
   
   %Gather sample sets and resize to 1D array
-  iris = [iHLL; iHRR; iVTT; iVBB; iDLT; iDLB; iDRT; iDRB; ];
+  iris 	= [iHLL; iHRR; iVTT; iVBB; iDLT; iDLB; iDRT; iDRB; ];
   irCon = median( median( iris ) );
   
   %Gather sample sets and resize to 1D array

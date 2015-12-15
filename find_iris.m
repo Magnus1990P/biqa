@@ -73,26 +73,6 @@ function ans = find_iris( im )
     i = i+irisstep;
   end
   
-  %{%
-  if CPR < CIR
-    hold off
-    imshow( im );
-    drawnow, hold on
-    
-    viscircles( [CPX,CPY], CPR, 'EdgeColor', 'y');
-    plot(CPX, CPY, 'y+');
-    drawnow
-    
-    plot(CIX+CIR, CIY+CIR, 'r+');
-    plot(CIX+CIR, CIY-CIR, 'r+');
-    plot(CIX-CIR, CIY+CIR, 'r+');
-    plot(CIX-CIR, CIY-CIR, 'r+');
-    plot(CIX,     CIY,    'r+');
-    viscircles([CIX, CIY], CIR, 'EdgeColor', 'r');
-    drawnow
-  end
-  %}
-  
   ans = [];
   if CPR < CIR
     ans = [floor(CIX), floor(CIY), floor(CIR), ...

@@ -33,7 +33,6 @@ function IRIS_SCLERA_CONTRAST = iso_isc( IMG, PUPIL, IRIS )
   %Median of iris
   irCon = median( median( iris ) );
     
-  %{%
   DELTA = floor( IRIS(1,3) * 1.1 + RECT );
   sHNL = get_rect( 'g', IMG, [IRIS(1,1)-DELTA ,     IRIS(1,2)],     RECT );
   sHFL = get_rect( 'g', IMG, [IRIS(1,1)-DELTA-IND,  IRIS(1,2)],     RECT );
